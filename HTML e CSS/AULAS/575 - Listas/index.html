@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listas e menus</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: rgb(20, 143, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(20, 143, 255, 1) 0%,
+          rgba(225, 124, 236, 1) 50%,
+          rgba(20, 139, 255, 1) 100%
+        );
+      }
+
+      nav {
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+      }
+
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-family: system-ui, -apple-system;
+        background: gray;
+        padding: 10px 20px;
+        display: block;
+        text-transform: uppercase;
+      }
+
+      nav a:hover {
+        background: rgb(20, 143, 255);
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+      </ul>
+    </nav>
+    <!-- Usada para navegação -->
+    <ul>
+      <br />
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <!-- type pode ter outras opções como 1,i,I,a,A -->
+    <!-- start é deonde começa a ordenar -->
+    <ol type="5" start="5">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ol>
+    <dl>
+      <dt>Café</dt>
+      <dd>Bebida preta quente</dd>
+      <dt>Chá</dt>
+      <dd>Bebida de ervas quente</dd>
+    </dl>
+  </body>
+</html>

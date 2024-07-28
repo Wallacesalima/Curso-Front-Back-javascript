@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      table {
+        border-collapse: collapse;
+        width: 700px;
+      }
+      table th,
+      table td {
+        color: #111;
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: left;
+      }
+
+      table caption {
+        /* caption pode ser top ou bottom */
+        caption-side: bottom;
+        text-align: left;
+        font-style: italic;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+
+      tfoot td,
+      table th {
+        background: #ddd;
+      }
+      tfoot td {
+        text-align: center;
+      }
+
+      .responsive-table {
+        max-width: 100%;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit.</p>
+    <div class="responsive-table">
+      <table>
+        <!-- caption para colocar descrição nas tabelas -->
+        <caption>
+          Uma descrição para tabela
+        </caption>
+        <!-- thead é o cabeçalho da tabela -->
+        <thead>
+          <!-- tr é linha  -->
+          <!-- td e th para colunas -->
+          <tr>
+            <!-- th para titulos(colunas) -->
+            <th>Titulo 1</th>
+            <th>Titulo 2</th>
+            <th>Titulo 3</th>
+          </tr>
+        </thead>
+        <!-- tbody é para o corpo da tabela -->
+        <tbody>
+          <!-- tr é linha  -->
+          <tr>
+            <!-- td para o corpo da tabela (colunas) -->
+            <td>Corpo 1</td>
+            <td>Corpo 2</td>
+            <td>Corpo 3</td>
+          </tr>
+
+          <tr>
+            <td rowspan="2">Corpo 1</td>
+            <td>Corpo 2</td>
+            <td>Corpo 3</td>
+          </tr>
+
+          <tr>
+            <td>Corpo 2</td>
+            <td>Corpo 3</td>
+          </tr>
+        </tbody>
+        <!-- tfoot para o rodapé -->
+        <tfoot>
+          <tr>
+            <td colspan="2">Total</td>
+            <td>9999</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+Claro! Aqui estão algumas das tags HTML mais comuns, com exemplos de como usá-las:
+
+1. **`<!DOCTYPE html>`**
+   - Define o tipo de documento e a versão do HTML.
+   - Exemplo:
+     ```html
+     <!DOCTYPE html>
+     <html>
+       <head>
+         <title>Meu Documento</title>
+       </head>
+       <body>
+         <h1>Olá, Mundo!</h1>
+       </body>
+     </html>
+     ```
+
+2. **`<html>`**
+   - Elemento raiz de um documento HTML.
+   - Exemplo:
+     ```html
+     <html>
+       <!-- Conteúdo aqui -->
+     </html>
+     ```
+
+3. **`<head>`**
+   - Contém informações sobre o documento, como o título e links para CSS.
+   - Exemplo:
+     ```html
+     <head>
+       <title>Meu Documento</title>
+       <meta charset="UTF-8">
+       <link rel="stylesheet" href="styles.css">
+     </head>
+     ```
+
+4. **`<title>`**
+   - Define o título da página, que aparece na aba do navegador.
+   - Exemplo:
+     ```html
+     <title>Minha Página</title>
+     ```
+
+5. **`<body>`**
+   - Contém o conteúdo visível da página.
+   - Exemplo:
+     ```html
+     <body>
+       <h1>Bem-vindo ao meu site</h1>
+       <p>Este é um parágrafo.</p>
+     </body>
+     ```
+
+6. **`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`**
+   - Tags de cabeçalho, variando de `<h1>` (mais importante) a `<h6>` (menos importante).
+   - Exemplo:
+     ```html
+     <h1>Cabeçalho Principal</h1>
+     <h2>Subcabeçalho</h2>
+     ```
+
+7. **`<p>`**
+   - Define um parágrafo.
+   - Exemplo:
+     ```html
+     <p>Este é um parágrafo de texto.</p>
+     ```
+
+8. **`<a>`**
+   - Define um link.
+   - Exemplo:
+     ```html
+     <a href="https://www.exemplo.com">Visite o Exemplo</a>
+     ```
+
+9. **`<img>`**
+   - Define uma imagem.
+   - Exemplo:
+     ```html
+     <img src="imagem.jpg" alt="Descrição da Imagem">
+     ```
+
+10. **`<ul>`, `<ol>`, `<li>`**
+    - Define listas não ordenadas (`<ul>`) e ordenadas (`<ol>`), e itens de lista (`<li>`).
+    - Exemplo:
+      ```html
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ol>
+      ```
+
+11. **`<table>`, `<tr>`, `<td>`, `<th>`**
+    - Define uma tabela, linhas (`<tr>`), células (`<td>`), e cabeçalhos de coluna (`<th>`).
+    - Exemplo:
+      ```html
+      <table>
+        <tr>
+          <th>Cabeçalho 1</th>
+          <th>Cabeçalho 2</th>
+        </tr>
+        <tr>
+          <td>Dados 1</td>
+          <td>Dados 2</td>
+        </tr>
+      </table>
+      ```
+
+12. **`<form>`, `<input>`, `<label>`, `<button>`**
+    - Define um formulário, campos de entrada (`<input>`), rótulos (`<label>`), e botões (`<button>`).
+    - Exemplo:
+      ```html
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <button type="submit">Enviar</button>
+      </form>
+      ```
+
+13. **`<div>`, `<span>`**
+    - Define divisões (`<div>`) e contêineres em linha (`<span>`).
+    - Exemplo:
+      ```html
+      <div>
+        <p>Este é um parágrafo dentro de um <div>.</p>
+      </div>
+
+      <span>Texto em linha.</span>
+      ```
+
+14. **`<strong>`, `<em>`**
+    - Define texto em negrito (`<strong>`) e itálico (`<em>`).
+    - Exemplo:
+      ```html
+      <strong>Texto em negrito</strong>
+      <em>Texto em itálico</em>
+      ```
+
+15. **`<br>`, `<hr>`**
+    - Define uma quebra de linha (`<br>`) e uma linha horizontal (`<hr>`).
+    - Exemplo:
+      ```html
+      Linha 1<br>
+      Linha 2
+
+      <hr>
+      ```
+
+Essas são algumas das tags mais básicas e úteis em HTML. Se precisar de mais detalhes ou exemplos específicos, é só avisar!
+ TAGS
+Estrutura Básica
+<!DOCTYPE html>: Define o tipo de documento e a versão do HTML.
+<html>: Elemento raiz de um documento HTML.
+<head>: Contém metadados, como título e links para scripts e folhas de estilo.
+<title>: Define o título do documento, exibido na aba do navegador.
+<body>: Contém todo o conteúdo visível da página.
+Estrutura de Conteúdo
+<header>: Define o cabeçalho de uma seção ou página.
+<nav>: Define um conjunto de links de navegação.
+<main>: Contém o conteúdo principal do documento.
+<section>: Define uma seção no documento.
+<article>: Define conteúdo independente e autocontido.
+<aside>: Define conteúdo relacionado ao conteúdo principal (como uma barra lateral).
+<footer>: Define o rodapé de uma seção ou página.
+<h1> a <h6>: Define títulos, sendo <h1> o mais importante e <h6> o menos importante.
+Texto e Formatação
+<p>: Define um parágrafo.
+<br>: Insere uma quebra de linha.
+<hr>: Insere uma linha horizontal.
+<strong>: Define texto com forte ênfase (negrito).
+<em>: Define texto com ênfase (itálico).
+<blockquote>: Define uma citação em bloco.
+<code>: Define um trecho de código.
+<pre>: Define texto pré-formatado.
+Listas
+<ul>: Define uma lista não ordenada.
+<ol>: Define uma lista ordenada.
+<li>: Define um item de lista.
+Links e Mídia
+<a>: Define um hiperlink.
+<img>: Insere uma imagem.
+<audio>: Insere conteúdo de áudio.
+<video>: Insere conteúdo de vídeo.
+<source>: Define fontes alternativas para mídia <audio> e <video>.
+<iframe>: Insere um conteúdo externo, como uma página da web dentro da página.
+Tabelas
+<table>: Define uma tabela.
+<tr>: Define uma linha de tabela.
+<th>: Define uma célula de cabeçalho de tabela.
+<td>: Define uma célula de dados de tabela.
+<caption>: Define uma legenda para a tabela.
+Formulários
+<form>: Define um formulário.
+<input>: Define um campo de entrada.
+<textarea>: Define uma área de texto.
+<button>: Define um botão.
+<select>: Define uma lista suspensa.
+<option>: Define uma opção em uma lista suspensa.
+<label>: Define um rótulo para um elemento <input>.
+Semântica e Estrutura
+<div>: Define uma divisão ou seção genérica.
+<span>: Define uma seção em linha genérica.
+<header>: Define um cabeçalho para uma seção.
+<footer>: Define um rodapé para uma seção.
+<section>: Define uma seção de conteúdo.
+<article>: Define um artigo.
