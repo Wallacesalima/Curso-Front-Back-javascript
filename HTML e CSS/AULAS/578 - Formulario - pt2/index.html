@@ -1,112 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulário pt2</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário pt2</title>
+  <style>
+    /* Remove margens e espaçamentos padrões de todos os elementos */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .form-container {
-        width: 200px;
-        background: rgb(20, 5, 53);
-        text-align: center;
-        border-radius: 10px;
-        padding: 10px 0;
-      }
+    /* Centraliza o formulário na tela */
+    body {
+      font-size: 20px;
+      margin: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
 
-      .titulo {
-        font-family: Georgia;
-        background: rgb(119, 119, 160);
-        text-transform: uppercase;
-      }
+    /* Estilos do contêiner do formulário */
+    .form-container {
+      height: 100%;
+      width: 300px;
+      background: rgb(20, 5, 53);
+      text-align: center;
+      border-radius: 10px;
+      padding: 20px 0 5px 0;
+    }
 
-      label {
-        color: rgb(119, 119, 160);
-        padding: 5px 2px;
-        cursor: pointer;
-        font-family: monospace;
-        margin: 8px 0 0 0;
-      }
+    /* Estilo do título do formulário */
+    .titulo {
+      font-family: Georgia;
+      background: rgb(119, 119, 160);
+      text-transform: uppercase;
+      margin: 0 0 10px 0;
+      font-size: 25px;
+      font-weight: bold;
+    }
 
-      input {
-        margin: 5px;
-        width: 90%;
-        padding: 2px;
-        border: 1px solid rgb(119, 119, 160);
-        border-radius: 5px;
-      }
+    ::placeholder {
+      font-size: 15px;
+    }
 
-      .submit {
-        border: 1px solid #fff;
-        background: #00a;
-        color: #fff;
-        padding: 3px 10px;
-        margin: 20px 0 5px 25px;
-        border-radius: 5px;
-      }
+    /* Estilo dos rótulos dos campos do formulário */
+    label {
+      color: rgb(119, 119, 160);
+      padding: 5px 2px;
+      cursor: pointer;
+      font-family: monospace;
+      margin: 30px 0 0 0;
+      font-size: 20px;
+    }
 
-      .reset {
-        border: 1px solid #fff;
-        background: #f00;
-        color: #fff;
-        padding: 3px 10px;
-        margin: 20px 25px 5px 0;
-        border-radius: 5px;
-      }
-    </style>
-  </head>
+    /* Estilo dos campos de entrada do formulário */
+    input {
+      margin: 5px;
+      width: 90%;
+      padding: 7px;
+      border: 3px solid rgb(119, 119, 160);
+      border-radius: 5px;
+    }
 
-  <body>
-    <div class="form-container">
-      <form action="#" method="get" target="_blank" autocomplete="off">
-        <p class="titulo">Formulário</p>
+    /* Estilo do botão de envio */
+    .submit {
+      border: 1px solid #fff;
+      background: #084808;
+      color: #fff;
+      padding: 3px 10px;
+      margin: 5px 0 5px 50px;
+      border-radius: 5px;
+      width: 80px;
+      height: 30px;
+    }
 
-        <p>
-          <label for="nome">Nome</label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Digite seu nome"
-          />
-        </p>
-        <p>
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Digite seu email"
-          />
-        </p>
-        <p>
-          <label for="nasc">Data de Nascimento</label>
-          <input type="date" id="nasc" name="Date-Nascimento" />
-        </p>
-          <label for="dev"
-            >
-            Sou um DEV
-            <input type="checkbox" id="dev" name="dev"
-          /></label>
-        </p>
-        <p>
-          <button class="reset" type="reset">Resetar</button>
-          <button class="submit" type="submit">Enviar</button>
-        </p>
-      </form>
-    </div>
-  </body>
+    /* Estilo do botão de reset */
+    .reset {
+      border: 1px solid #fff;
+      background: #f00;
+      color: #fff;
+      padding: 3px 10px;
+      margin: 20px 50px 5px 0;
+      border-radius: 5px;
+      width: 80px;
+      height: 30px;
+    }
+
+    .checkbox {
+      width: 135px;
+      margin: 5px 0 10px 20px;
+      /* Mantém o rótulo em uma única linha */
+      white-space: nowrap;
+    }
+
+    .radio {
+      width: 135px;
+      margin: 5px 20px 10px 20px;
+      /* Mantém o rótulo em uma única linha */
+      white-space: nowrap;
+    }
+
+    .color {
+      height: 50px;
+      width: 80px;
+      margin: 0 0 0 20px;
+      /* Mantém o rótulo em uma única linha */
+      white-space: nowrap;
+    }
+
+    .color-input {
+      width: 100px;
+      height: 40px;
+    }
+
+    .radio-masc {
+      width: 105px;
+    }
+    .radio-outro-outra {
+      width: 53px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <!-- Formulário centralizado -->
+    <form action="#" method="get" target="_blank" autocomplete="off">
+      <p class="titulo">Formulário</p>
+
+      <!-- Campo de entrada para nome -->
+      <p>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+      </p>
+
+      <!-- Campo de entrada para email -->
+      <p>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="ex.: email@email.com">
+      </p>
+
+      <!-- Campo de entrada para data de nascimento -->
+      <p>
+        <label for="nasc">Data de Nascimento</label>
+        <input type="date" id="nasc" name="Date-Nascimento" value="2024-07-29">
+      </p>
+      <p class="color">
+        <label for="cor">Cor preferida</label>
+        <input class="color-input " type="color" id="cor" name="cor" value="#00ffff">
+      </p>
+
+      <!-- Campo de entrada para checkbox "Sou DEV" -->
+      <p class="checkbox">
+        <label for="dev">Sou um DEV</label>
+        <input class="checkbox" type="checkbox" id="dev" name="dev">
+      </p>
+      <!-- Campo de entrada para checkbox "Genero" -->
+      <p class="titulo">Genero</p>
+      <p class="radio">
+        <label for="fem">Feminino</label>
+        <input type="radio" id="fem" name="genero">
+      </p>
+      <p class="radio">
+        <label for="masc">Masculino</label>
+        <input class="radio-masc" type="radio" id="masc" name="genero">
+      </p>
+
+      <!-- Botões de reset e submit -->
+      <p>
+        <button class="reset" type="reset">Resetar</button>
+        <button class="submit" type="submit">Enviar</button>
+      </p>
+    </form>
+  </div>
+</body>
+
 </html>
