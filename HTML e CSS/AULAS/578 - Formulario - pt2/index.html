@@ -43,6 +43,7 @@
       font-weight: bold;
     }
 
+    /* Estilo do placeholder dos campos de entrada */
     ::placeholder {
       font-size: 15px;
     }
@@ -90,6 +91,7 @@
       height: 30px;
     }
 
+    /* Estilo do checkbox */
     .checkbox {
       width: 135px;
       margin: 5px 0 10px 20px;
@@ -97,6 +99,7 @@
       white-space: nowrap;
     }
 
+    /* Estilo do radio button */
     .radio {
       width: 135px;
       margin: 20px 20px 5px 20px;
@@ -104,6 +107,7 @@
       white-space: nowrap;
     }
 
+    /* Estilo do campo de seleção de cor */
     .color {
       height: 50px;
       width: 80px;
@@ -112,16 +116,31 @@
       white-space: nowrap;
     }
 
+    /* Estilo do campo de entrada de cor */
     .color-input {
       width: 100px;
       height: 40px;
     }
 
+    /* Estilo específico para o radio button masculino */
     .radio-masc {
       width: 100px;
     }
-    .radio-outro-outra {
-      width: 53px;
+
+    /* Estilo do campo de entrada de número */
+    .number {
+      width: 55px;
+      margin: 5px 0 10px 20px;
+      /* Mantém o rótulo em uma única linha */
+      white-space: nowrap;
+    }
+
+    /* Estilo do campo de texto */
+    .textarea {
+      width: 90%;
+      height: 80px;
+      margin: 10px 0 15px 0;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -130,7 +149,7 @@
   <div class="form-container">
     <!-- Formulário centralizado -->
     <form action="#" method="get" target="_blank" autocomplete="off">
-      <p class="titulo">Formulário</p>
+      <h1 class="titulo">Formulário</h1>
 
       <!-- Campo de entrada para nome -->
       <p>
@@ -149,9 +168,28 @@
         <label for="nasc">Data de Nascimento</label>
         <input type="date" id="nasc" name="Date-Nascimento" value="2024-07-29">
       </p>
+
+      <!-- Campo de entrada para URL do LinkedIn -->
+      <p>
+        <label for="url">Seu linkedin</label>
+        <input type="url" id="url" name="url" placeholder="URL">
+      </p>
+
+      <!-- Campo de seleção para nacionalidade -->
+      <p class="checkbox">
+        <label for="select"> Nacionalidade</label>
+        <select name="select" id="select">
+          <option value="Espanhol">Espanhol</option>
+          <option value="disabled" disabled>disabled</option>
+          <option value="Brasileiro" selected>Brasileiro(a)</option>
+          <option value="Japones">Japones</option>
+        </select>
+      </p>
+
+      <!-- Campo de seleção de cor preferida -->
       <p class="color">
         <label for="cor">Cor preferida</label>
-        <input class="color-input " type="color" id="cor" name="cor" value="#00ffff">
+        <input class="color-input" type="color" id="cor" name="cor" value="#00ffff">
       </p>
 
       <!-- Campo de entrada para checkbox "Sou DEV" -->
@@ -159,8 +197,39 @@
         <label for="dev">Sou um DEV</label>
         <input class="checkbox" type="checkbox" id="dev" name="dev">
       </p>
-      <!-- Campo de entrada para checkbox "Genero" -->
-      <p class="titulo">Genero</p>
+
+      <!-- Campo de entrada para upload de foto -->
+      <p class="checkbox">
+        <label for="foto">Sua foto</label>
+        <input class="checkbox" type="file" id="foto" name="foto" accept=".png, .svg, image/*" multiple>
+      </p>
+
+      <!-- Campo de entrada para número da sorte -->
+      <p class="number">
+        <label for="number">Numero da sorte</label>
+        <input class="number" type="number" id="number" name="number" min="10" max="50" step="2">
+      </p>
+
+      <!-- Campo de entrada para senha -->
+      <p class="checkbox">
+        <label for="password">Sua senha</label>
+        <input class="checkbox" type="password" id="password" name="password" placeholder="Digite uma senha">
+      </p>
+
+      <!-- Campo de texto para falar sobre você -->
+      <p>
+        <label for="textarea">Fale sobre você</label>
+        <textarea class="textarea" name="textarea" id="textarea" rows="2" cols="1"></textarea>
+      </p>
+
+      <!-- Campo de entrada para nível de satisfação do formulário -->
+      <p>
+        <label for="range">Nivel de satisfação do formulario</label>
+        <input type="range" id="range" name="range" min="0" max="20" step="2">
+      </p>
+
+      <!-- Campo de entrada para rádio "Gênero" -->
+      <h2 class="titulo">Genero</h2>
       <p class="radio">
         <label for="fem">Feminino</label>
         <input type="radio" id="fem" name="genero">
