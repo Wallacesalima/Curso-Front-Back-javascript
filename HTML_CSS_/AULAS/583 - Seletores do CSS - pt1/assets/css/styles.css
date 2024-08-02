@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 
+    Seleciona todos os elementos e zera as margens e preenchimentos.
+*/
+
+/* 
+h1,
+p {
+    color: purple;
+}
+*/
+/* 
+    Seleciona todos os <h1> e <p> e define a cor do texto como roxa.
+*/
+
+/* 
+body div section p,
+body div section h1 {
+    color: red;
+}
+*/
+/* 
+    Seleciona <p> e <h1> dentro de uma <section> dentro de uma <div> dentro do <body> e define a cor do texto como vermelha.
+*/
+
+.color-blue {
+    color: blue;
+}
+/* 
+    Define a cor do texto como azul para elementos com a classe "color-blue".
+*/
+
+/* 
+.main-content h2 {
+    font-style: italic;
+    color: red;
+}
+*/
+/* 
+    Seleciona todos os <h2> dentro de elementos com a classe "main-content" e define o estilo da fonte como itálico e a cor do texto como vermelha.
+*/
+
+/* 
+.main-content .heading {
+    font-style: italic;
+    color: red;
+}
+*/
+/* 
+    Seleciona elementos com a classe "heading" dentro de elementos com a classe "main-content" e define o estilo da fonte como itálico e a cor do texto como vermelha.
+*/
+
+/* 
+body .main-content h2.heading {
+    font-style: italic;
+    color: red;
+}
+*/
+/* 
+    Seleciona <h2> com a classe "heading" dentro de elementos com a classe "main-content" dentro do <body> e define o estilo da fonte como itálico e a cor do texto como vermelha.
+*/
+
+div {
+    color: initial;
+    margin-left: 20px;
+}
+/* 
+    Define a cor do texto como a cor inicial e adiciona uma margem à esquerda de 20px para todas as <div>.
+*/
+
+/* 
+.pai {
+    color: red;
+}
+*/
+/* 
+    Seleciona elementos com a classe "pai" e define a cor do texto como vermelha.
+*/
+
+.pai.filho {
+    color: red;
+}
+/* 
+    Seleciona elementos que possuem ambas as classes "pai" e "filho" e define a cor do texto como vermelha.
+*/
+
+.pai>.filho>.filho {
+    color: red;
+}
+/* 
+    Seleciona elementos com a classe "filho" que são filhos diretos de elementos com a classe "filho", que por sua vez são filhos diretos de elementos com a classe "pai", e define a cor do texto como vermelha.
+*/
+
+.pai>.filho>span>.filho {
+    color: blue;
+}
+/* 
+    Seleciona elementos com a classe "filho" que são filhos diretos de <span>, que por sua vez são filhos diretos de elementos com a classe "filho", que por sua vez são filhos diretos de elementos com a classe "pai", e define a cor do texto como azul.
+*/

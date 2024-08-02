@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores do CSS</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+
+<body>
+
+    <!--
+    <h1 class="color-blue">Lorem ipsum</h1>
+    <h1>Lorem ipsum</h1>
+    <p class="color-blue">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia nemo corporis quaerat nesciunt maiores eaque suscipit rerum laborum, non illo unde laboriosam, aliquid ipsa culpa mollitia minus dignissimos, aliquam sed.</p>
+    -->
+    <!-- Trecho comentado. Aqui temos um <h1> com e sem a classe "color-blue" e um <p> com a classe "color-blue". -->
+
+    <!--
+    <div class="main-content">
+        <h1 class="heading">Lorem</h1>
+        <h2 class="heading">Lorem</h2>
+        <h3 class="heading">Lorem</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati quidem sunt cumque amet rerum aliquid itaque beatae. Accusamus eaque corrupti dolorem error nihil quam vero ipsum beatae libero quasi?</p>
+    </div>
+    -->
+    <!-- Trecho comentado. Temos uma <div> com a classe "main-content" e várias headings (h1, h2, h3) e um parágrafo dentro dela. -->
+
+    <div class="pai">
+        Pai
+        <div class="filho outra qualquer coisa">
+            filho 1
+            <div class="filho outra qualquer coisa">
+                filha do filho
+            </div>
+        </div>
+        <div class="filho outra qualquer coisa">
+            filho 2
+            <span>
+                <div class="filho outra qualquer coisa">
+                    filha do filho
+                </div>
+            </span>
+        </div>
+    </div>
+    <!--
+    Estrutura de <div> para demonstrar seletores CSS. Temos uma <div> "pai" com duas <div> "filho" dentro. Uma das "filho" contém uma <div> aninhada dentro de um <span>.
+    -->
+
+    <!--
+    <div>
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi obcaecati quidem sunt cumque amet rerum aliquid itaque beatae. Accusamus eaque corrupti dolorem error nihil quam vero ipsum beatae libero quasi?</p>
+    </div>
+    -->
+    <!-- Trecho comentado. Temos uma <div> com uma heading (h2) e um parágrafo. -->
+
+    <!--
+    <div>
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam a sint blanditiis ea alias dolores. Accusantium recusandae provident, alias iusto aliquid eveniet, nemo doloribus eos quaerat, ratione eum dolores repellendus!</p>
+        <section>
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam a sint blanditiis ea alias dolores. Accusantium recusandae provident, alias iusto aliquid eveniet, nemo doloribus eos quaerat, ratione eum dolores repellendus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam a sint blanditiis ea alias dolores. Accusantium recusandae provident, alias iusto aliquid eveniet, nemo doloribus eos quaerat, ratione eum dolores repellendus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam a sint blanditiis ea alias dolores. Accusantium recusandae provident, alias iusto aliquid eveniet, nemo doloribus eos quaerat, ratione eum dolores repellendus!</p>
+        </section>
+    </div>
+    -->
+    <!-- Trecho comentado. Uma <div> com uma heading (h1) e um parágrafo, seguida por uma <section> com várias headings (h1) e parágrafos. -->
+</body>
+
+</html>
