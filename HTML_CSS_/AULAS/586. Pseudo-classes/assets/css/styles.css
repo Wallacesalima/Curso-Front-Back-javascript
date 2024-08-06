@@ -1,0 +1,64 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+.hover_exemplo {
+    transition: all 1s ease;
+}
+
+.hover_exemplo:hover {
+    background: red;
+
+}
+
+a {
+    color: darkorange;
+}
+
+a:link {
+    color: deeppink;
+}
+
+a:visited {
+    color: firebrick;
+}
+
+a:hover {
+    background: darkslateblue;
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    background: darkslategray;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+input:checked+p {
+    color: black;
+}
+
+.Teste_white {
+    color: white;
+}
+
+.pai .lista li:first-child {
+    background: red;
+}
+
+.pai .lista li:last-child {
+    background: yellow;
+}
