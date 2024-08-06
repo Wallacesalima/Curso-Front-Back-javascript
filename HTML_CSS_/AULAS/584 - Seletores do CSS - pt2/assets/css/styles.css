@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+    Seleciona todos os elementos e zera as margens e preenchimentos.
+*/
+
+.pai h1+p {
+    color: red;
+}
+
+.pai p+h1 {
+    color: blue;
+}
+
+.pai h1~p{
+    color: blueviolet;
+}
+
+/* .pai-div .um~.dois {
+    color: aqua;
+    background: black;
+} */
+
+.pai-div .um + .dois {
+    color: aqua;
+    background: black;
+}
