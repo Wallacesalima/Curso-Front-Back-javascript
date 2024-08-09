@@ -1,0 +1,32 @@
+* {
+    margin: 5px;
+    padding: 0;
+    /* Aplica um margin de 5px e remove o padding de todos os elementos */
+}
+
+/* Este trecho foi comentado e não será aplicado
+ul li:nth-child(2) {
+    background-color: rebeccapurple;
+    Aplica a cor de fundo 'rebeccapurple' ao segundo item da lista (ul li:nth-child(2))
+} */
+
+ul li:nth-child(odd) {
+    background-color: rebeccapurple;
+    /* Aplica a cor de fundo 'rebeccapurple' aos itens ímpares (1º, 3º, 5º, ...) */
+}
+
+ul li:nth-child(even) {
+    background-color: darkturquoise;
+    /* Aplica a cor de fundo 'darkturquoise' aos itens pares (2º, 4º, 6º, ...) */
+}
+
+ul li:nth-child(3n) {
+    background-color: darkolivegreen;
+    /* Aplica a cor de fundo 'darkolivegreen' a cada terceiro item (3º, 6º, 9º, ...) */
+}
+
+ul li:nth-child(3n+5) {
+    background-color: darkred;
+    color: white;
+    /* Aplica a cor de fundo 'darkred' e o texto na cor 'white' ao quinto item após cada terceiro item (5º, 8º, 11º, ...) */
+}
