@@ -1,0 +1,48 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+ul li::after {
+    content: ' depois do (item) e dentro do li ';
+    margin: 5px;
+    padding: 2px;
+    background: red;
+    color: #fff;
+}
+
+ul li::before {
+    content: ' antes do (item) e dentro do li ' ;
+    margin: 5px;
+    padding: 2px;
+    background: red;
+    color: #fff;
+}
+
+p {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+p::first-letter {
+    font-size: 150px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+p::first-line {
+background: gray;
+}
+
+
+
+p::selection {
+    background: darkred;
+    color: white;
+}
+
+.form-field::placeholder {
+    color: darkred;
+    background: black;
+}

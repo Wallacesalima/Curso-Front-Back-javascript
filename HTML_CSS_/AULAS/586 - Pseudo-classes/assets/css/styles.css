@@ -1,64 +1,78 @@
+
 * {
     margin: 5px;
     padding: 0;
+    /* Aplica uma margem de 5px e remove o padding de todos os elementos */
 }
 
 .hover_exemplo {
     transition: all 1s ease;
+    /* Adiciona uma transição suave de 1 segundo para todas as propriedades */
 }
 
 .hover_exemplo:hover {
     background: red;
-
+    /* Muda o fundo para vermelho quando o elemento com a classe 'hover_exemplo' é passado com o mouse */
 }
 
 a {
     color: darkorange;
+    /* Define a cor do texto dos links como darkorange por padrão */
 }
 
 a:link {
     color: deeppink;
+    /* Define a cor dos links não visitados como deeppink */
 }
 
 a:visited {
     color: firebrick;
+    /* Define a cor dos links visitados como firebrick */
 }
 
 a:hover {
     background: darkslateblue;
     color: white;
     text-decoration: none;
+    /* Quando o link é passado com o mouse, o fundo fica darkslateblue, o texto fica branco, e o sublinhado é removido */
 }
 
 a:active {
     background: darkslategray;
     color: white;
     text-decoration: none;
+    /* Quando o link é clicado, o fundo fica darkslategray, o texto fica branco, e o sublinhado é removido */
 }
 
 input:focus {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     outline: none;
     border: 1px solid black;
+    /* Aplica uma sombra ao redor do input quando ele está em foco, remove a borda padrão, e define uma borda preta */
 }
 
 input:disabled {
     background: gray;
     cursor: not-allowed;
+    /* Define o fundo como cinza e muda o cursor para 'not-allowed' para inputs desabilitados */
 }
 
 input:checked+p {
     color: black;
+    /* Altera a cor do parágrafo seguinte para preto se o input anterior estiver marcado (checkbox ou rádio) */
 }
 
 .Teste_white {
     color: white;
+    /* Define a cor do texto como branco para elementos com a classe 'Teste_white' */
 }
 
 .pai .lista li:first-child {
     background: red;
+    /* Altera o fundo do primeiro item de uma lista (li) dentro de um elemento com a classe 'pai' para vermelho */
 }
 
 .pai .lista li:last-child {
     background: yellow;
+    /* Altera o fundo do último item de uma lista (li) dentro de um elemento com a classe 'pai' para amarelo */
 }
