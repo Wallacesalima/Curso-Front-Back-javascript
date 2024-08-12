@@ -1,0 +1,17 @@
+ * {
+     margin: 5px;
+     padding: 0;
+ }
+
+ #texto {
+     color: red;
+     font-family: sans-serif;
+     font-size: 30px;
+ }
+
+ p {
+     /* desativa herança */
+     color: initial;
+     /* ativa herança  */
+     font-size: inherit;
+ }

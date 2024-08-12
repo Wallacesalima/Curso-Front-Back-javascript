@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+/* https://specificity.keegan.st/ */
+
 /* 
 Resumo: Especificidade é um conceito do CSS que determina qual regra será aplicada quando múltiplas regras se aplicam ao mesmo elemento. Ela é calculada com base nos seletores utilizados, onde seletores ID têm maior peso que seletores de classe, que por sua vez têm maior peso que seletores de elementos. Quanto maior a especificidade, maior a prioridade da regra.
 */
