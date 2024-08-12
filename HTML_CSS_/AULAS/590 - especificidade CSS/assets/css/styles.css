@@ -1,0 +1,64 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+/* 
+Resumo: Especificidade é um conceito do CSS que determina qual regra será aplicada quando múltiplas regras se aplicam ao mesmo elemento. Ela é calculada com base nos seletores utilizados, onde seletores ID têm maior peso que seletores de classe, que por sua vez têm maior peso que seletores de elementos. Quanto maior a especificidade, maior a prioridade da regra.
+*/
+
+/* 
+Especificidade: ID (100)  
+Aplica um fundo vermelho ao elemento com ID "p".
+*/
+#p {
+    background: red;
+}
+
+/* 
+Especificidade: ID (100) + Classe (10) = 110 
+Altera o fundo para amarelo em um elemento com ID "p" e classe "p".
+*/
+#p.p {
+    background: yellow;
+}
+
+/* 
+Especificidade: Classe (10) 
+Define o fundo azul para qualquer elemento com a classe "p".
+*/
+.p {
+    background: blue;
+}
+
+/* 
+Especificidade: Elemento (1) + ID (100) + Classe (10) = 111 
+Muda o fundo para darkcyan no elemento <p> que tem ID "p" e classe "p".
+*/
+p#p.p {
+    background: darkcyan;
+}
+
+/* 
+Especificidade: ID (100) + Elemento (1) + ID (100) + Classe (10) = 211 
+Define o fundo roxo para um elemento <p> com ID "p" e classe "p" que é filho de um elemento com ID "b".
+*/
+#b p#p.p {
+    background: purple;
+}
+
+/* 
+Especificidade: ID (100) + ID (100) + Elemento (1) + ID (100) + Classe (10) = 211 
+Altera o fundo para verde em um <p> com ID "p" e classe "p", filho de um elemento <body> com ID "b".
+*/
+body#b p#p.p {
+    background: green;
+}
+
+/* 
+Especificidade: ID (100) + Classe (10) + Elemento (1) + ID (100) + Classe (10) = 121 
+Define o fundo cinza para um <p> com ID "p" e classe "p", filho de um <body> com ID "b" e classe "bclass".
+*/
+body#b.bclass p#p.p {
+    background: gray;
+}
