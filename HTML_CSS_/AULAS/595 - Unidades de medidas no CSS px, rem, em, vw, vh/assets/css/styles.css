@@ -1,0 +1,107 @@
+/* Remove a margem e o padding padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define o tamanho da fonte base para 62.5% do valor padrão do navegador, 
+tornando mais fácil calcular tamanhos de fontes e espaçamentos usando rem (1rem = 10px) */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* Define o tamanho da fonte dos elementos h1 em pixels fixos (50px) */
+h1 {
+    text-transform: uppercase;
+    font-size: 50px; /* Unidades em px são fixas e não responsivas */
+}
+
+/* Define o tamanho da fonte usando pixels (30px) e aplica uma cor de texto em hexadecimal */
+.absoluta {
+    font-size: 30px;
+    color: #555; /* A cor #555 representa um tom de cinza */
+}
+
+/* Define a largura em rem (50rem, que é 50 vezes o tamanho da fonte base), 
+e o tamanho da fonte também em rem (3rem, ou seja, 30px com a configuração atual) */
+.pai {
+    width: 50rem; /* 50rem = 50 x 10px = 500px */
+    font-size: 3rem; /* 3rem = 3 x 10px = 30px */
+    background: #e9d5d5; /* Cor de fundo em hexadecimal */
+}
+
+/* Define a largura como uma porcentagem do elemento pai (50%),
+e a altura em rem (5rem, equivalente a 50px) */
+.porcent {
+    width: 50%; /* Percentual relativo ao elemento pai */
+    height: 5rem; /* 5rem = 5 x 10px = 50px */
+    background: red; /* Cor de fundo em nome de cor (red) */
+}
+
+/* Define o tamanho da fonte usando a unidade em (0.7em, relativo ao tamanho da fonte do elemento pai) */
+p {
+    font-size: 0.7em; /* 0.7em = 70% do tamanho da fonte do elemento pai */
+}
+
+/* Define o tamanho da fonte em em (1em, igual ao tamanho da fonte do elemento pai) */
+.em {
+    font-size: 1em; /* 1em = 100% do tamanho da fonte do elemento pai */
+}
+
+/* Define o tamanho da fonte em rem (5rem, ou seja, 50px com a configuração atual) */
+.rem {
+    font-size: 5rem; /* 5rem = 5 x 10px = 50px */
+}
+
+/* Define o tamanho da fonte em rem (5rem) e usa uma cor de fundo vermelha */
+.vw {
+    font-size: 5rem; /* 5rem = 50px */
+    background: red; /* Cor de fundo vermelha */
+}
+/* Define o tamanho da fonte dos parágrafos dentro de elementos com a classe "pages" em rem (4rem) */
+.pages p {
+    font-size: 4rem; /* 4rem = 40px */
+}
+
+/* Define a altura como 100% da altura da viewport (100vh) 
+e usa uma cor de fundo coral */
+.page-1 {
+    height: 100vh; /* 100vh = 100% da altura da viewport */
+    background: coral; /* Cor de fundo coral */
+}
+
+/* Define a altura como 100% da altura da viewport (100vh) 
+e usa uma cor de fundo ciano */
+.page-2 {
+    height: 100vh; /* 100vh = 100% da altura da viewport */
+    background: cyan; /* Cor de fundo ciano */
+}
+
+/* Define a altura como 100% da altura da viewport (100vh) 
+e usa uma cor de fundo cáqui */
+.page-3 {
+    height: 100vh; /* 100vh = 100% da altura da viewport */
+    background: khaki; /* Cor de fundo cáqui */
+}
+
+
+/* Define o tamanho da fonte dos links em rem (3rem), remove a decoração de texto e define margens horizontais */
+a {
+    font-size: 3rem; /* 3rem = 30px */
+    text-decoration: none; /* Remove sublinhado */
+    margin: 0 20px; /* Margem horizontal de 20px */
+}
+
+/* Define uma caixa que ajusta sua largura e altura de acordo com as dimensões da viewport */
+.responsive-box {
+    width: 50vmin; /* 50vmin será 50% da menor dimensão da viewport (altura ou largura) */
+    height: 50vmax; /* 50vmax será 50% da maior dimensão da viewport (altura ou largura) */
+    background-color: lightblue; /* Cor de fundo azul claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* Tamanho da fonte fixado em rem */
+    color: white;
+    border-radius: 10px; /* Cantos arredondados */
+}

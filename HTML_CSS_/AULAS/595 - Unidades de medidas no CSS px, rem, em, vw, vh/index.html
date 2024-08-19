@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Link para o arquivo CSS externo -->
+    <title> 595 - Unidades de medidas no CSS px, rem, em, vw, vh, %</title>
+</head>
+
+<body>
+    <h1>Unidade absoluta única interessante (px)</h1>
+    <p class="absoluta">As unidades de comprimento absoluto são fixas e um comprimento expresso em qualquer uma delas
+        aparecerá exatamente como aquele tamanho. Unidades de comprimento absoluto não são recomendadas para uso em
+        tela, porque os tamanhos de tela variam muito. No entanto, elas podem ser usadas se o meio de saída for
+        conhecido, como para layout de impressão.</p>
+    <div class="pai">
+        <h1>Unidade relativa</h1>
+        <p class="porcent">Tamanho em relação ao elemento pai</p>
+        <p class="porcent">Tamanho em relação ao elemento pai</p>
+        <br>
+        <p>Unidades de comprimento relativo especificam um comprimento relativo a outra propriedade de comprimento.
+            Unidades de comprimento relativo escalam melhor entre diferentes mídias de renderização.</p>
+        <p class="em">Baseado no tamanho usado no elemento pai mais proximo.</p>
+    </div>
+    <p class="rem">Baseado no tamanho usado no root(HTML).</p>
+    <p class="vw">Baseado no tamanho do viewport.Ideal para criar landing pages.</p>
+
+    <div class="pages">
+        <a href="#one">One</a>
+        <a href="#two">Two</a>
+        <a href="#three">Three</a>
+
+        <div class="page-1" id="one">
+            <h1>page 1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores reiciendis, inventore ex, quaerat
+                fugit
+                sequi velit laboriosam non ratione qui assumenda animi dignissimos quisquam dolor laborum tenetur
+                reprehenderit culpa sit.</p>
+            <a href="#two">Two</a>
+            <a href="#three">Three</a>
+        </div>
+        <div class="page-2" id="two">
+            <h1>page 2</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores reiciendis, inventore ex, quaerat
+                fugit
+                sequi velit laboriosam non ratione qui assumenda animi dignissimos quisquam dolor laborum tenetur
+                reprehenderit culpa sit.</p>
+            <a href="#one">One</a>
+            <a href="#three">Three</a>
+        </div>
+        <div class="page-3" id="three">
+            <h1>page 3</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores reiciendis, inventore ex, quaerat
+                fugit
+                sequi velit laboriosam non ratione qui assumenda animi dignissimos quisquam dolor laborum tenetur
+                reprehenderit culpa sit.</p>
+            <a href="#one">One</a>
+            <a href="#two">Two</a>
+        </div>
+
+    </div>
+
+    <div class="responsive-box">
+        Caixa Responsiva
+    </div>
+</body>
+
+</html>
