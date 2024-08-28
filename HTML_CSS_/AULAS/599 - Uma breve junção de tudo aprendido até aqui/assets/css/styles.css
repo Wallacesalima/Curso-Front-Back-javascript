@@ -78,7 +78,6 @@ uma altura fixa de 300px, flutuarão à esquerda e terão um padding de 15px */
 .full-page {
     max-width: 100%;
     padding: 30px;
-    padding-top: 73px;
     height: 100vh;
     background: turquoise;
 }
