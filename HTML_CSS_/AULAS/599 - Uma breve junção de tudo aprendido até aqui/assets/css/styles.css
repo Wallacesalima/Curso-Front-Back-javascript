@@ -85,6 +85,8 @@ uma altura fixa de 300px, flutuarão à esquerda e terão um padding de 15px */
 
 .full-page-content{
     max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
 }
 
 
