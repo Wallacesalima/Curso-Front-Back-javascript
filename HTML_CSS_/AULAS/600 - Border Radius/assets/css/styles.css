@@ -1,0 +1,120 @@
+/* Reseta a margem e o padding de todos os elementos e define o box-sizing para incluir padding e borda na largura e altura */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: scroll;
+    font-family: sans-serif;
+}
+
+/* Adiciona um padding de 15px ao redor de todos os lados do elemento com a classe .grid */
+.grid {
+    max-width: 1200px;
+    padding: 15px;
+    padding-top: 73px;
+    margin: 0 auto;
+}
+
+/* Cria um clearfix para garantir que o container .grid envolva corretamente os elementos flutuantes dentro dele */
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Define que os elementos .col terão 33.33% da largura do container pai, 
+uma altura fixa de 300px, flutuarão à esquerda e terão um padding de 15px */
+.grid .col {
+    width: 33.33%;
+    height: 250px;
+    float: left;
+    padding: 15px;
+}
+
+/* Garante que o conteúdo dentro de .col ocupe 100% da largura e altura da coluna 
+   e define uma cor de fundo vermelha */
+.grid .col-content {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 30px 60px 120px 240px;
+    /* para criar circulo - Precisa ser quadrado o eleento */
+    /* border-radius: 50%; */
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.849);
+}
+
+.menu ul {
+    list-style: none;
+    display: block;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover {
+    background: #444;
+    /* transition: all 300ms ease-in-out; */
+}
+
+.full-page {
+    max-width: 100%;
+    padding: 30px;
+    height: 100vh;
+    background: turquoise;
+}
+
+.full-page-content {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+
+@media(max-width: 568px) {
+    .grid .col {
+        width: 100%
+    }
+}
+
+@media(min-width: 569px) and (max-width: 768px) {
+    .grid .col {
+        width: 50%;
+    }
+}
+
+@media(min-width: 769px) and (max-width: 1200px) {
+    .grid .col {
+        width: 33.33%;
+    }
+}
+
+@media(min-width: 1201px) {
+    .grid .col {
+        width: 25%;
+    }
+}
