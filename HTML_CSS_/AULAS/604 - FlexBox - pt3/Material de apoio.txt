@@ -1,0 +1,11 @@
+display: inline-flex faz com que o contêiner flexível seja tratado como um elemento inline, mantendo o layout flexível para seus filhos.
+
+Inline: Não quebra a linha e ocupa apenas o espaço necessário.
+Flex: Organiza os filhos com o layout flexbox.
+Uso: Útil para alinhamento flexível dentro de um fluxo de texto.
+
+flex-flow combina flex-direction e flex-wrap:
+
+flex-direction: Define a direção dos itens (ex.: row ou column).
+flex-wrap: Controla se os itens quebram em múltiplas linhas (wrap ou nowrap).
+Exemplo: flex-flow: row wrap organiza itens horizontalmente e permite que eles quebrem para novas linhas.

@@ -1,0 +1,25 @@
+As principais e mais usadas opções para a propriedade justify-content são:
+
+flex-start: Alinha os itens no início do contêiner (padrão).
+center: Centraliza os itens no contêiner.
+flex-end: Alinha os itens no final do contêiner.
+space-between: Distribui os itens com espaço igual entre eles, sem espaço nas extremidades.
+space-around: Distribui os itens com espaço igual ao redor deles, incluindo nas extremidades.
+Essas são as mais comuns e oferecem as soluções mais práticas para a maioria dos layouts.
+
+Aqui estão as principais direções usadas com a propriedade flex-direction:
+
+row: Alinha os itens em uma linha horizontal, da esquerda para a direita (padrão).
+column: Alinha os itens em uma coluna vertical, de cima para baixo.
+row-reverse: Alinha os itens em uma linha horizontal, mas invertida, da direita para a esquerda.
+column-reverse: Alinha os itens em uma coluna vertical, mas invertida, de baixo para cima.
+Essas direções definem como os itens são organizados dentro do contêiner flexível, afetando como o justify-content os alinha ao longo do eixo principal.
+
+propriedade align-items no CSS é usada para alinhar os itens dentro de um contêiner flexível ao longo do eixo transversal (perpendicular ao eixo principal). Aqui estão as principais opções:
+
+stretch (padrão): Estica os itens para preencher o contêiner ao longo do eixo transversal.
+flex-start: Alinha os itens no início do eixo transversal.
+center: Centraliza os itens ao longo do eixo transversal.
+flex-end: Alinha os itens no final do eixo transversal.
+baseline: Alinha os itens pela linha de base do texto.
+Essas opções são usadas para controlar o alinhamento vertical dos itens quando o eixo principal é horizontal (flex-direction: row) e o alinhamento horizontal quando o eixo principal é vertical (flex-direction: column).

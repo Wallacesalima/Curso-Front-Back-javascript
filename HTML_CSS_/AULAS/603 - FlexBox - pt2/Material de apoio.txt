@@ -1,0 +1,30 @@
+A propriedade flex-wrap no CSS controla se os itens dentro de um contêiner flexível devem quebrar para uma nova linha ou permanecer em uma única linha. Aqui estão as principais opções:
+
+nowrap (padrão): Todos os itens permanecem em uma única linha, sem quebra. Se os itens não couberem na linha, eles serão compactados.
+wrap: Os itens serão quebrados em várias linhas, se necessário. A quebra ocorre da esquerda para a direita (ou do topo para baixo em uma coluna).
+wrap-reverse: Similar ao wrap, mas as linhas são quebradas na direção inversa (da direita para a esquerda ou de baixo para cima).
+Essas opções são usadas para controlar como os itens se comportam quando não cabem dentro do contêiner flexível, oferecendo mais controle sobre o layout.
+
+
+A diferença principal entre as propriedades align-items e align-content no CSS é o contexto em que elas atuam:
+
+align-items:
+
+Alinha os itens individuais dentro de uma única linha no contêiner flexível.
+Atua no eixo transversal (perpendicular ao eixo principal) e afeta o alinhamento de todos os itens em uma linha.
+É aplicado mesmo que haja apenas uma linha de itens.
+Exemplos de valores: flex-start, center, flex-end, stretch.
+
+Uso comum: Se flex-direction for row, alinha os itens verticalmente dentro da linha.
+align-content:
+
+Alinha as linhas de itens dentro de um contêiner flexível, quando há espaço extra no contêiner.
+Também atua no eixo transversal, mas só é relevante quando há várias linhas de itens (ou seja, quando flex-wrap está habilitado e os itens se quebram em múltiplas linhas).
+Controla o espaçamento entre as linhas e o alinhamento delas dentro do contêiner.
+Exemplos de valores: flex-start, center, flex-end, space-between, stretch.
+
+Uso comum: Se há várias linhas de itens, controla o espaçamento vertical entre essas linhas.
+Resumo:
+
+align-items alinha os itens dentro de uma linha.
+align-content alinha e distribui as linhas de itens dentro do contêiner.
