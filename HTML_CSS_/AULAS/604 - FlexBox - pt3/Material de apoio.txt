@@ -9,3 +9,14 @@ flex-flow combina flex-direction e flex-wrap:
 flex-direction: Define a direção dos itens (ex.: row ou column).
 flex-wrap: Controla se os itens quebram em múltiplas linhas (wrap ou nowrap).
 Exemplo: flex-flow: row wrap organiza itens horizontalmente e permite que eles quebrem para novas linhas.
+
+flex-grow define quanto um item deve crescer para ocupar o espaço disponível no contêiner flexível.
+
+Exemplo: flex-grow: 1 significa que o item crescerá para ocupar espaço extra de forma proporcional em relação a outros itens.
+Valor maior = mais crescimento.
+Simples: Quanto maior o valor, mais espaço o item ocupa.
+
+flex-basis define o tamanho inicial de um item antes de ele crescer ou encolher no contêiner flexível.
+
+Exemplo: flex-basis: 200px faz com que o item comece com 200px de largura (ou altura, dependendo da direção do flex).
+Simples: É o tamanho base do item.

@@ -13,6 +13,8 @@
 
 .flex-item {
     flex-grow: 1;
+    flex-basis: 320px;
+    flex-shrink: 0;
     margin: 2px;
     height: 200px;
     color: #fff;
