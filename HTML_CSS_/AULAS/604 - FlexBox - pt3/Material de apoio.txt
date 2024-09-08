@@ -20,3 +20,13 @@ flex-basis define o tamanho inicial de um item antes de ele crescer ou encolher 
 
 Exemplo: flex-basis: 200px faz com que o item comece com 200px de largura (ou altura, dependendo da direção do flex).
 Simples: É o tamanho base do item.
+
+A propriedade align-self no CSS controla o alinhamento de um item específico dentro de um contêiner flexbox ou grid, sobrescrevendo o comportamento de align-items aplicado ao contêiner.
+
+Valores comuns de align-self:
+auto: O item herda o comportamento de alinhamento do contêiner (padrão).
+flex-start: Alinha o item no início do eixo transversal (topo, em layouts padrão).
+flex-end: Alinha o item no final do eixo transversal (parte inferior).
+center: Alinha o item no centro do eixo transversal.
+baseline: Alinha o item com a linha de base do conteúdo.
+stretch: Estica o item para preencher o contêiner (padrão se o tamanho do item não estiver definido).

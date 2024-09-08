@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 24px;
+}
+
+h1 {
+    align-self: center;
+}
+
+p {
+    margin: 24px 12px;
+}
+
+.two-columns {
+    display: flex;
+}
+
+.two-columns .col {
+    display: flex;
+    flex-direction: column;
+    background: lawngreen;
+    margin: 10px;
+    padding: 10px;
+}
+
+.gallery {
+    flex-flow: row wrap;
+    display: flex;
+}
+
+.gallery .img {
+    flex: 1 0  20%;
+    height: 50px;
+    background: rgba(0, 0, 255, 0.541);
+    margin: 10px;
+}
+
