@@ -11,11 +11,15 @@ body {
 
 .grid {
     max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-columns: repeat(auto-fill, minmax(320px,1fr )); */
+    /* grid-template-columns: repeat(auto-fill, minmax(320px,1fr )); Mais usado*/ 
     grid-template-rows: repeat(2, 1fr );
-    gap: 30px;
+    /* gap: 30px; */
+    row-gap: 30px;
+    column-gap: 10px;
+    gap: 30px 60px;
 }
 
 .grid div {
@@ -25,6 +29,8 @@ body {
 
 .grid div:nth-child(5) {
     background: darkred;
-    grid-row: span 1;
+    /* grid-row: span 1;
     grid-column: span 2;
+    grid-column: 1 / 4; */
+    /* grid-area: 1 / 1 / 4 / 4 ; */
 }
