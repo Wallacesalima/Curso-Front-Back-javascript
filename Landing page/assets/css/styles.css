@@ -1,6 +1,63 @@
+:root {
+    --gap: 3rem;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif; */
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}
+
+h1, h2, h3, h4 , h5, h6 {
+    font-family: 'montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 5.5rem;
+}
+h3 {
+    font-size: 5rem;
+}
+h4 {
+    font-size: 4.5rem;
+}
+h5 {
+    font-size: 4rem;
+}
+h6 {
+    font-size: 3.5rem;
+}
+
+.main-bg {
+    background-image: url('../img/scattered-forcefields.svg');
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section-vh {
+    min-height: 100vh;
 }
