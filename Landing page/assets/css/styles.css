@@ -1,5 +1,6 @@
 :root {
     --gap: 3rem;
+    --primary-color: #5AA;
 }
 
 * {
@@ -8,6 +9,7 @@
     /* font-family: "Open Sans", sans-serif;
     font-family: "Montserrat", sans-serif; */
 }
+
 html {
     font-size: 62.5%;
 }
@@ -17,7 +19,12 @@ body {
     font-size: 2rem;
 }
 
-h1, h2, h3, h4 , h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'montserrat', sans-serif;
 }
 
@@ -25,18 +32,23 @@ h1 {
     font-size: 6rem;
     text-transform: uppercase;
 }
+
 h2 {
     font-size: 5.5rem;
 }
+
 h3 {
     font-size: 5rem;
 }
+
 h4 {
     font-size: 4.5rem;
 }
+
 h5 {
     font-size: 4rem;
 }
+
 h6 {
     font-size: 3.5rem;
 }
@@ -60,4 +72,29 @@ h6 {
 
 .section-vh {
     min-height: 100vh;
+}
+
+.menu {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+.menu h1 {
+    font-size: 2.3rem;
+}
+.menu h1 a{
+    color: var(--primary-color);
+}
+.menu ul li a {
+    display: block;
 }
