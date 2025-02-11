@@ -1,5 +1,5 @@
 .main-bg {
-    background-image: url('../img/scattered-forcefields.svg');
+    background-image: url('../img/confetti-doodles.svg');
     background-size: cover;
     background-position: center center;
     color: #fff;
@@ -7,6 +7,7 @@
 
 .white-bg {
     background-color: #fff;
+    color: var(--primary-color);
 }
 
 .main-content {
@@ -17,4 +18,8 @@
 
 .section-vh {
     min-height: 100vh;
+}
+
+.menu-spacing{
+    height: 65px;
 }
