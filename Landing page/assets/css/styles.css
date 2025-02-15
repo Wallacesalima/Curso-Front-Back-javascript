@@ -1,4 +1,5 @@
 .home-content {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap) ;
@@ -13,6 +14,7 @@
 
 .home-img img {
     max-width: 100%;
+    height: auto;
 }
  
 .intro-content {
@@ -78,7 +80,14 @@
 }
 
 .gallery-img img:hover {
-    transform: translate(3%, 3%) scale(1.2) rotate(5deg);
-
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);;
 }
 
+.contact-form {
+    grid-column: span 2 ;
+}
+
+.contact-form img {
+    max-width: 100%;
+    height: auto;
+}

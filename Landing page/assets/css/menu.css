@@ -1,4 +1,5 @@
 .menu {
+    z-index: 1;
     background: #fff;
     position: fixed;
     width: 100%;
@@ -28,6 +29,7 @@
     padding: 2rem;
     font-size: 1.8rem;
     color: var(--primary-color);
+    position: relative;
 }
 .menu ul li a:hover {
    color: var(--secondary-color);
