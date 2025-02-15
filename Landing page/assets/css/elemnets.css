@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     /* font-family: "Open Sans", sans-serif;
     font-family: "Montserrat", sans-serif; */
 }
@@ -54,7 +55,7 @@ h6 {
     font-size: 3.5rem;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -76,15 +77,18 @@ table caption {
     font-size: 1.6rem;
     font-style: italic;
     text-align: left;
-    margin-bottom: 1rem;}
+    margin-bottom: 1rem;
+}
 
-table td, table th {
+table td,
+table th {
     white-space: nowrap;
     padding: 1rem;
     text-align: left;
     border: 0.2rem solid #eee;
 }
 
-tfoot td, table th {
+tfoot td,
+table th {
     background: #eee
 }
