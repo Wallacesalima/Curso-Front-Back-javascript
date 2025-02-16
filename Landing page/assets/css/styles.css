@@ -150,3 +150,18 @@ body .full-width-message {
 .form-group ::placeholder {
     color: #07082697;
 }
+
+.footer {
+    text-align: center;
+    font-size: 1.6rem;
+}
+.footer a {
+    color: var(--primary-color);
+}
+.footer p {
+    margin: 0;
+    padding: 3rem;
+}
+.heart {
+    color: #f00;
+}
