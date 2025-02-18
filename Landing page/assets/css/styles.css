@@ -99,6 +99,7 @@
     flex-wrap: wrap;
     gap: var(--gap);
 }
+
 .form-grid legend {
     font-size: 1.6rem;
     font-style: italic;
@@ -125,7 +126,7 @@
 }
 .form-group input:focus, 
 .form-group textarea:focus {
-    box-shadow: 1px 1px 10px 2px #1017f097 ;
+    box-shadow: 1px 1px 10px 3px #d9f966 ;
 }
 .form-group button {
     border: 0.5rem solid #fff;
@@ -164,4 +165,25 @@ body .full-width-message {
 }
 .heart {
     color: #f00;
+}
+
+@media (max-width: 800px) {
+    .home-content, .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
+
+    .grid-one-content {
+        display: block;
+    }
+    
 }
