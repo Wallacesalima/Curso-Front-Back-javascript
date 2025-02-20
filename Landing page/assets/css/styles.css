@@ -257,5 +257,8 @@ body .full-width-message {
         display: none;
     }
 
+    .intro-content h2 {
+        font-size: 4rem;
+    }
     
 }
