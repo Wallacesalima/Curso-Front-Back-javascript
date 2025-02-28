@@ -33,3 +33,37 @@ document.body.innerHTML += `Seu nome com letras maiúsculas: ${nome.toUpperCase(
 
 // Converte o nome para letras minúsculas
 document.body.innerHTML += `Seu nome com letras minúsculas: ${nome.toLowerCase()}<br/>`;
+
+/*
+// Solicita ao usuário que digite seu nome completo
+const nome = prompt('Digite o seu nome completo:'); 
+
+// Exibe o nome digitado na página
+document.body.innerHTML = `Seu nome é: ${nome} <br/>`;
+
+// Exibe a quantidade de letras do nome (removendo espaços)
+document.body.innerHTML += `Seu nome tem ${nome.replaceAll(' ', '').length} letras <br/>`;
+
+// Exibe a segunda letra do nome
+document.body.innerHTML += `A segunda letra do seu nome é: ${nome.charAt(1)}<br/>`;
+
+// Exibe o primeiro índice da letra 'A' (independente de maiúsculas e minúsculas)
+document.body.innerHTML += `Qual o primeiro índice da letra 'A' no seu nome? ${nome.toUpperCase().indexOf('A')}<br/>`;
+
+// Exibe o último índice da letra 'A' (também ignorando maiúsculas e minúsculas)
+document.body.innerHTML += `Qual o último índice da letra 'A' no seu nome? ${nome.toUpperCase().lastIndexOf('A')}<br/>`;
+
+// Exibe as três últimas letras do nome
+document.body.innerHTML += `As últimas 3 letras do seu nome são: ${nome.slice(-3)}<br/>`;
+
+// Exibe o nome dividido em palavras (transformando o array em string para exibição correta)
+document.body.innerHTML += `As palavras do seu nome são: ${nome.split(' ').join(', ')}<br/>`;
+
+// Exibe o nome em letras maiúsculas
+document.body.innerHTML += `Seu nome com letras maiúsculas: ${nome.toUpperCase()}<br/>`;
+
+// Exibe o nome em letras minúsculas
+document.body.innerHTML += `Seu nome com letras minúsculas: ${nome.toLowerCase()}<br/>`;
+
+// Exibe no console o array contendo as palavras do nome
+console.log(nome.split(' ')); */
