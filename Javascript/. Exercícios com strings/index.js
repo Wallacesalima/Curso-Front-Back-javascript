@@ -57,7 +57,7 @@ document.body.innerHTML += `Qual o último índice da letra 'A' no seu nome? ${n
 document.body.innerHTML += `As últimas 3 letras do seu nome são: ${nome.slice(-3)}<br/>`;
 
 // Exibe o nome dividido em palavras (transformando o array em string para exibição correta)
-document.body.innerHTML += `As palavras do seu nome são: ${nome.split(' ').join(', ')}<br/>`;
+document.body.innerHTML += `As palavras do seu nome são: ${nome.split(' ')}<br/>`;
 
 // Exibe o nome em letras maiúsculas
 document.body.innerHTML += `Seu nome com letras maiúsculas: ${nome.toUpperCase()}<br/>`;
