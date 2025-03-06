@@ -17,6 +17,7 @@ function meuEscopo() {
         const peso = form.querySelector('.peso');  // Campo para o peso
         const altura = form.querySelector('.altura');  // Campo para a altura
 
+
         // Adicionando os dados preenchidos ao array 'pessoas'
         pessoas.push({
             nome: nome.value,  // Pegando o valor preenchido no campo de nome
@@ -26,7 +27,8 @@ function meuEscopo() {
         });
 
         // Exibindo as informações preenchidas na tela (dentro da div 'resultado')
-        resultado.innerHTML += `${nome.value} ${sobrenome.value}, ${peso.value}, ${altura.value}.<br>`;
+        resultado.innerHTML += `${nome.value} ${sobrenome.value}, ${peso.value}, ${altura.value}.<br>
+        IMC: ${(peso.value/(altura.value * altura.value)).toFixed(2)}.<br><br>`;
 
         // Exibindo os dados no console para você verificar (opcional)
         console.log(pessoas);
