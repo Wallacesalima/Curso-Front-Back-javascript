@@ -13,7 +13,7 @@ const pessoas = [
     {
         nome: "Alfonso",
         idade: 76,
-        cidade: "Ceara"
+        cidade: "Ceará"
     },
 ]
 
@@ -34,7 +34,7 @@ pessoas.push({
 })
 
 // Exibindo o array pessoas após mudanças
-console.log(`O array pessoas atualizado contém esses dados:`,pessoas)
+console.log(`O array pessoas atualizado contém esses dados:`, pessoas)
 
 
 
