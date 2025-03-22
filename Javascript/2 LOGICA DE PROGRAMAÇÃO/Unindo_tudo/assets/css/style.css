@@ -71,3 +71,12 @@ form button:hover {
 form button:active {
     background: #000;
 }
+
+.resultado {
+    margin-top: 40px;
+    background: #fff;
+    color: var(--primary-color);
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
