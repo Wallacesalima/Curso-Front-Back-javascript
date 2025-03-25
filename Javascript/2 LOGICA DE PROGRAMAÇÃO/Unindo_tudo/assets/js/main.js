@@ -14,20 +14,22 @@ function validarEntradas() {
     const altura = Number(inputAltura.value)
 
     // Verifica se o peso não é um número ou está vazio
-    if (!peso) {
+    if (isNaN(peso) || peso == '') {
         resultado.innerHTML = `Peso inválido`
         setCor(false)
         return
     }
     // Verifica se a altura não é um número ou está vazia
-    if (!altura) {
+    if (isNaN(altura) || altura == '') {
         resultado.innerHTML = `Altura inválida`
         setCor(false)
         return
         // Se os valores forem válidos, chama a função para calcular e categorizar o IMC
     }
+
     setCor(true)
     categorizarImc(peso, altura)
+
 }
 
 function setCor(isValid) {
@@ -58,7 +60,9 @@ function categorizarImc(peso, altura) {
         resultado.innerHTML = `Seu IMC é ${imc} - (Obesidade grau 2)`
     } else if (imc > 40) {
         resultado.innerHTML = `Seu IMC é ${imc} - (Obesidade grau 3)`
-    } else {}
+    } else {
+        console.error('Erro inesperado!') // Adiciona um log para depuração
+    }
 }
 
 
