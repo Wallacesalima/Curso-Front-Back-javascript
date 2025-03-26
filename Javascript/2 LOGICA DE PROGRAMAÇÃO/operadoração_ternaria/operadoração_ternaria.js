@@ -6,4 +6,4 @@ const nivelUsuario = pontuacaoUsuario >= 1000 ? 'Usuário VIP' : 'Usuário norma
 const corUsuario = 'Pink'
 const corPadrao = corUsuario || 'preta'
 
-console.log(nivelUsuario, corPadrao)
+console.log(nivelUsuario, corPadrao )
