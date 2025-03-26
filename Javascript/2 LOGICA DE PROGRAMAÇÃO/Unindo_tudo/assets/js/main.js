@@ -14,13 +14,13 @@ function validarEntradas() {
     const altura = Number(inputAltura.value)
 
     // Verifica se o peso não é um número ou está vazio
-    if (isNaN(peso) || peso == '') {
+    if (!peso) {
         resultado.innerHTML = `Peso inválido`
         setCor(false)
         return
     }
     // Verifica se a altura não é um número ou está vazia
-    if (isNaN(altura) || altura == '') {
+    if (!altura) {
         resultado.innerHTML = `Altura inválida`
         setCor(false)
         return
