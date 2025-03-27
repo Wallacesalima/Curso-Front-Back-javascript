@@ -30,6 +30,9 @@ function getDayWeekText(diaSemana) {
             diaSemanaTexto = 'Sábado';
             // break - poderia ser usado tambem
             return diaSemanaTexto;
+        default:
+            diaSemanaTexto = ''
+            return diaSemanaTexto
     }
 
     // return diaSemanaTexto; - seria necessario caso usasse somente o break
