@@ -1,5 +1,4 @@
-const container = document.querySelector('.container')
-const dataNoHtml = container.querySelector('.dataHtml')
+const dataNoHtml = document.querySelectorAll('.dataHtml')
 
 function zeroAEsquerda (num) {
     return num >10 ? num : `0${num}`
@@ -21,4 +20,4 @@ function formataData (data) {
 const data = new Date() 
 const dataBrasil = formataData(data)
 
-dataNoHtml.innerHTML = `'Essa é a data: ${dataBrasil}`
+dataNoHtml.innerHTML = `Essa é a data: ${dataBrasil}`
