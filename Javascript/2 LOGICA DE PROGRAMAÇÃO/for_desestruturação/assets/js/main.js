@@ -10,9 +10,9 @@ const div = document.createElement('div') // criando uma div
 
 for (let i = 0; i < elementos.length; i++) {
     const { tag, texto } = elementos[i] // Pegando tag e texto
-    const elementosHtml = document.createElement(tag) // Criando o elemento
-    elementosHtml.textContent = texto // Adicionando o texto
-    div.appendChild(elementosHtml) // Inserindo na div criada
+    const elementosNoHtml = document.createElement(tag) // Criando o elemento
+    elementosNoHtml.textContent = texto // Adicionando o texto
+    div.appendChild(elementosNoHtml) // Inserindo na div criada
 }
 
 container.appendChild(div) // adicionando a div dentro do container
