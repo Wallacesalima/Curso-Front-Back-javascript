@@ -8,6 +8,10 @@ const elementos = [
 const container = document.querySelector('.container') // selecionando a classe container
 const div = document.createElement('div') // criando uma div
 
+// OUTRA OPÇÃO 
+// for (let indice in elementos) {
+//     const { tag, texto } = elementos[indice]
+ 
 for (let i = 0; i < elementos.length; i++) {
     const { tag, texto } = elementos[i] // Pegando tag e texto
     const elementosNoHtml = document.createElement(tag) // Criando o elemento
