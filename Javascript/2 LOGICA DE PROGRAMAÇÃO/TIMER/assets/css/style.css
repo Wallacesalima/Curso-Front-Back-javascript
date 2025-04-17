@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary-color:  rgb(148, 66, 66);
+    --primary-color-dark:  rgb(95, 50, 50);
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'open sans';
+}
+
+p {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 2px solid var(--primary-color-dark);
+}
+
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.541);
+    padding: 20px;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.relogio {
+    font-size: 3em;
+    padding-top: 1em;
+}
+
+.color-red {
+    color:red
+}
+
+.color-black {
+    color: black;
+}
