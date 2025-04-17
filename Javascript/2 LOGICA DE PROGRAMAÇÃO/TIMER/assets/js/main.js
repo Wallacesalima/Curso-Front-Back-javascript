@@ -25,27 +25,36 @@ function iniciarTimer() {
 
     if (timer) return
 
+    relogio.classList.remove('pausado')
     timer = setInterval(() => {
         segundos++
         atualizarRelogio()
-        relogio.classList.add('color-black')
     }, 1000)
 }
 
 function pausarTimer() {
     clearInterval(timer)
     timer = null
-    relogio.classList.remove('color-black')
-    relogio.classList.add('color-red')
+    relogio.classList.add('pausado')
 }
 
 function zerarTimer() {
     pausarTimer()
     segundos = 0
     atualizarRelogio()
-    relogio.classList.remove('color-red')
+    relogio.classList.remove('pausado')
 }
 
-iniciar.addEventListener('click', iniciarTimer)
-pausar.addEventListener('click', pausarTimer)
-zerar.addEventListener('click', zerarTimer)
+document.addEventListener('click', function (e) {
+    const elemento = e.target
+
+    if (elemento.classList.contains('iniciar')) {
+        iniciarTimer()
+    }
+    if (elemento.classList.contains('pausar')) {
+        pausarTimer()
+    }
+    if (elemento.classList.contains('zerar')) {
+        zerarTimer()
+    }
+})
