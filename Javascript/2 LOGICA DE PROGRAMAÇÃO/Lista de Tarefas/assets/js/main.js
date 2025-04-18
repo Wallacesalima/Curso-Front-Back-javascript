@@ -10,8 +10,9 @@ function criarLi() {
 function criarTarefa(textInput) {
     const li = criarLi()
     tarefas.appendChild(li)
-    li.innerText = textInput
+    li.innerHTML = textInput
     limpaInput()
+    criaBotaoEditar(li)
     criaBotaoApagar(li)
     salvarTarefas()
 }
@@ -22,13 +23,23 @@ function limpaInput() {
 }
 
 function criaBotaoApagar(li) {
-    li.innerText += '  '
+    li.innerHTML += '  '
     const botaoApagar = document.createElement('button')
     botaoApagar.innerHTML = '❌'
     botaoApagar.setAttribute('class', 'apagar')
     botaoApagar.setAttribute('title', 'Apagar essa tarefa')
     li.appendChild(botaoApagar)
 }
+
+function criaBotaoEditar(li) {
+    li.innerHTML += '  '
+    const botaoEditar = document.createElement('button')
+    botaoEditar.innerHTML = '✏️'
+    botaoEditar.setAttribute('class', 'editar');
+    botaoEditar.setAttribute('title', 'Editar tarefa');
+    li.appendChild(botaoEditar);
+}
+
 
 function apagarTarefa() {
     document.addEventListener('click', function (e) {
@@ -43,6 +54,24 @@ function apagarTarefa() {
 
 }
 
+function editarTarefa() {
+    document.addEventListener('click', function (e) {
+        const el = e.target
+
+        if (el.classList.contains('editar')) {
+            const li = el.parentElement
+            const textoAtual = li.firstChild.textContent.trim()
+            const novaTarefa = prompt('Edite sua tarefa:', textoAtual)
+
+            if (novaTarefa) {
+                li.firstChild.textContent = novaTarefa + '  '
+                salvarTarefas()
+            }
+        }
+    })
+}
+
+
 function salvarTarefas() {
     const liTarefas = tarefas.querySelectorAll('li')
     const listaDeTarefas = []
@@ -50,6 +79,7 @@ function salvarTarefas() {
     for (let tarefa of liTarefas) {
         let tarefaTexto = tarefa.innerText
         tarefaTexto = tarefaTexto.replace('❌', '').trim()
+        tarefaTexto = tarefaTexto.replace('✏️', '').trim()
         listaDeTarefas.push(tarefaTexto)
     }
     const tarefasJSON = JSON.stringify(listaDeTarefas)
@@ -77,4 +107,5 @@ inputTarefa.addEventListener('keypress', function (e) {
 })
 
 addTarefaSalvas()
+editarTarefa()
 apagarTarefa()

@@ -28,16 +28,24 @@ ul {
     padding: 0;
 }
 
+
 li {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items:start;
+    align-self: flex-start;
+    text-align: start;
     list-style: none;
-    justify-content: space-between;
-    white-space: pre;
-    border-bottom: #000 solid 1px;
-    margin: 5px 0px;
+    border-bottom: 1px solid #000;
+    margin: 5px 0;
+    /* padding: 10px; */
     width: 100%;
-    overflow:auto;
 }
+
+li button {
+    margin-left: 5px;;
+}
+
 
 div {
     display: flex;
@@ -86,7 +94,7 @@ input {
     border: double 5px #000;
 }
 
-.apagar {
+ .apagar {
     font-size: 1.2rem;
     min-height: 2rem;
     min-width: 2rem;
@@ -102,3 +110,18 @@ input {
     background:rgb(255, 219, 219);
 }
 
+.editar {
+    font-size: 1.2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    cursor: pointer;
+    border: none;
+}
+
+.editar:hover {
+    font-size: 1.2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    cursor: pointer;
+    background:rgb(236, 227, 179);
+}
