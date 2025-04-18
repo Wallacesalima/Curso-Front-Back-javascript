@@ -24,7 +24,7 @@ function limpaInput() {
 function criaBotaoApagar(li) {
     li.innerText += '  '
     const botaoApagar = document.createElement('button')
-    botaoApagar.innerText = 'Apagar'
+    botaoApagar.innerHTML = '❌'
     botaoApagar.setAttribute('class', 'apagar')
     botaoApagar.setAttribute('title', 'Apagar essa tarefa')
     li.appendChild(botaoApagar)
@@ -34,7 +34,7 @@ function apagarTarefa() {
     document.addEventListener('click', function (e) {
 
         const el = e.target
-    
+
         if (el.classList.contains('apagar')) {
             el.parentElement.remove()
             salvarTarefas()
@@ -44,21 +44,21 @@ function apagarTarefa() {
 }
 
 function salvarTarefas() {
-   const liTarefas = tarefas.querySelectorAll('li')
-   const listaDeTarefas = []
+    const liTarefas = tarefas.querySelectorAll('li')
+    const listaDeTarefas = []
 
-   for (let tarefa of liTarefas) {
-    let tarefaTexto = tarefa.innerText
-    tarefaTexto = tarefaTexto.replace('Apagar', '').trim()
-    listaDeTarefas.push(tarefaTexto)
-   }
-   const tarefasJSON = JSON.stringify(listaDeTarefas)
-   localStorage.setItem('tarefas', tarefasJSON) 
+    for (let tarefa of liTarefas) {
+        let tarefaTexto = tarefa.innerText
+        tarefaTexto = tarefaTexto.replace('❌', '').trim()
+        listaDeTarefas.push(tarefaTexto)
+    }
+    const tarefasJSON = JSON.stringify(listaDeTarefas)
+    localStorage.setItem('tarefas', tarefasJSON)
 }
 
 function addTarefaSalvas() {
     const tarefas = localStorage.getItem('tarefas')
-    const listaDeTarefas =JSON.parse(tarefas)
+    const listaDeTarefas = JSON.parse(tarefas)
 
     for (let tarefa of listaDeTarefas) {
         criarTarefa(tarefa)

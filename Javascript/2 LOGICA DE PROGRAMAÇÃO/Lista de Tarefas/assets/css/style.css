@@ -57,8 +57,20 @@ input {
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-tarefa:hover {
+    width: 30%;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
     background: var(--primary-color-dark);
     border: none;
+    cursor: pointer;
 }
 
 .container {
@@ -75,10 +87,18 @@ input {
 }
 
 .apagar {
-    padding: 0.2rem 0;
-    width: 20%;
-    font-size: 1rem;
-    font-weight: 600;
-    background: #f80404;
-    color:#fff;
+    font-size: 1.2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    cursor: pointer;
+    border: none;
 }
+
+.apagar:hover {
+    font-size: 1.2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    cursor: pointer;
+    background:rgb(255, 219, 219);
+}
+
