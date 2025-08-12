@@ -16,5 +16,5 @@ const ubers = [
 ]
 
 
-const somaUbers = ubers.reduce((ac, valor) => ac + valor)
+const somaUbers = ubers.reduce((ac, valor) => ac + valor, 0)
 console.log(somaUbers)
