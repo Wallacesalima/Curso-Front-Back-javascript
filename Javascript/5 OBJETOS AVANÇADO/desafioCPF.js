@@ -14,8 +14,9 @@ const validaCPF = (cpf) => {
 
     }, 0)
 
-    const primeiroDigito = 11 - (multiplicaCpf % 11)
-    console.log(primeiroDigito)
+    let primeiroDigito = (11 - (multiplicaCpf % 11));
+    primeiroDigito = primeiroDigito > 9 ? 0 : primeiroDigito;
+
 
     const cpfComUmdigito = [...cpf.slice(0, 9)]
     cpfComUmdigito.push(primeiroDigito)
@@ -25,13 +26,22 @@ const validaCPF = (cpf) => {
         return ac + Number(digito) * multiplicadores
     }, 0)
 
-     const segundoDigito = 11 - (multiplicaCpfComUmDigito % 11)
-    console.log(segundoDigito)
+    let segundoDigito = (11 - (multiplicaCpfComUmDigito % 11));
+    segundoDigito = segundoDigito > 9 ? 0 : segundoDigito;
+
 
     const cpfCompleto = [...cpfComUmdigito]
     cpfCompleto.push(segundoDigito)
 
-    console.log(cpf)
+
+    if (cpfCompleto.join('') === cpf.join('')) {
+        console.log("CPF Válido ✅");
+    } else {
+        console.log("CPF Inválido ❌");
+    }
+
+
+    return cpfCompleto.join('') === cpf.join('');
 }
 
 
