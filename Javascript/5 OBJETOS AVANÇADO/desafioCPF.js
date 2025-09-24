@@ -8,21 +8,33 @@ const validaCPF = (cpf) => {
 
     cpf = Array.from(cpf)
 
-    const primeiroDigito = cpf.slice(0, 9).map(digito => digito).reduce((ac, digito) => {
-        
-        for (let i = 0; i < cpf.length; i++) {
-            ac = multiplicadores * digito
-        }
-        let multiplicadores = (cpf.length + 1 - i)
+    const multiplicaCpf = cpf.slice(0, 9).reduce((ac, digito, i) => {
+        const multiplicadores = 10 - i
+        return ac + Number(digito) * multiplicadores
 
-        return ac
     }, 0)
 
-
-
-    // console.log(cpf)
+    const primeiroDigito = 11 - (multiplicaCpf % 11)
     console.log(primeiroDigito)
-    console.log(multiplicadores)
+
+    const cpfComUmdigito = [...cpf.slice(0, 9)]
+    cpfComUmdigito.push(primeiroDigito)
+
+    const multiplicaCpfComUmDigito = cpfComUmdigito.reduce((ac, digito, i) => {
+        const multiplicadores = 11 - i
+        return ac + Number(digito) * multiplicadores
+    }, 0)
+
+     const segundoDigito = 11 - (multiplicaCpfComUmDigito % 11)
+    console.log(segundoDigito)
+
+    const cpfCompleto = [...cpfComUmdigito]
+    cpfCompleto.push(segundoDigito)
+
+    console.log(cpf)
 }
 
-validaCPF('931.254.220-60')
+
+
+
+validaCPF('705.484.450-52')
