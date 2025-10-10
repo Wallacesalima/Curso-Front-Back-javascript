@@ -75,14 +75,14 @@ function ContaBancaria(numero, saldo) {
     this.saldo = saldo
 }
 
-ContaBancaria.prototype.verSaldo = function() {
+ContaBancaria.prototype.verSaldo = function () {
     return `Saldo: R$${this.saldo}`
 }
 
 ContaBancaria.prototype.depositar = function (valor) {
     if (typeof valor !== 'number') return 'Valor inválido'
     if (valor < 0) return 'Valor abaixo de zero não é permitido!'
-    this.saldo += valor 
+    this.saldo += valor
     return this.verSaldo()
 }
 
@@ -94,12 +94,29 @@ ContaBancaria.prototype.sacar = function (valor) {
     return this.verSaldo()
 }
 
+ContaBancaria.prototype.transferir = function (valor, contaDestino) {
+    if (valor > this.saldo) return `valor maior que o saldo`
+    if (typeof valor !== 'number') return 'Valor inválido'
+    if (valor < 0) return 'Valor abaixo de zero não é permitido!'
+    this.sacar(valor)
+    contaDestino.depositar(valor)
+
+    return this.verSaldo()
+}
+
 
 const conta1 = new ContaBancaria(123, 1200)
+const conta2 = new ContaBancaria(123, 100)
 
 console.log(conta1.depositar(100))
 console.log(conta1.sacar(200))
 console.log(conta1.verSaldo())
+
+conta1.transferir(200, conta2);
+
+console.log(conta1.verSaldo())
+console.log(conta2.verSaldo())
+
 
 
 
