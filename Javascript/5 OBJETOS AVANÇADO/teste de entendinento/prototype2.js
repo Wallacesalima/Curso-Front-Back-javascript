@@ -59,9 +59,9 @@ Retangulo.prototype.perimetro = function () {
 }
 
 Retangulo.prototype.scale = function (fator) {
-    const multiplicaAltura = fator * this.altura
-    const multiplicaLargura = fator * this.largura
-    return `${multiplicaAltura} / ${multiplicaLargura}`
+    this.largura *= fator; 
+    this.altura *= fator;
+    return `${this.altura} / ${this.largura}`
 }
 
 const Retangulo1 = new Retangulo(4, 5)
@@ -106,7 +106,7 @@ ContaBancaria.prototype.transferir = function (valor, contaDestino) {
 
 
 const conta1 = new ContaBancaria(123, 1200)
-const conta2 = new ContaBancaria(123, 100)
+const conta2 = new ContaBancaria(123, 100 )
 
 console.log(conta1.depositar(100))
 console.log(conta1.sacar(200))
@@ -116,6 +116,12 @@ conta1.transferir(200, conta2);
 
 console.log(conta1.verSaldo())
 console.log(conta2.verSaldo())
+
+// QUESTIONARIO
+
+// GABARITO
+
+// 1-B, 2-C, 3-B, 4-B, 
 
 
 
