@@ -1,9 +1,12 @@
 // Função que cria uma entidade, base para os outros
 function criarEntidade(nome, tipo) {
+    // 'herda' os metodos do 'entidadePrototype'
     const entidade = Object.create(entidadePrototype)
+
     entidade.nome = nome
     entidade.tipo = tipo
     entidade.id = Math.floor(Math.random() * 10000)
+    // retorna o objeto entidade
     return entidade
 }
 
@@ -14,25 +17,29 @@ const exibirInfo = {
     }
 }
 
-// metodo que clona as informações 
+// metodo que clona objeto
 const clonar = {
     clonar() {
         return structuredClone(this)
     }
 }
 
-// adicionando ao prototype da entidade metodos
+// adicionando ao prototype da entidade os metodos criados acima
 const entidadePrototype = { ...exibirInfo, ...clonar }
 
+// cria o produto
 function criarProduto(nome, preco) {
+     // 'herda' os metodos do 'produtoPrototypeLoja'
     const produtoLoja = Object.create(produtoPrototypeLoja)
     produtoLoja.nome = nome
     produtoLoja.preco = preco
     produtoLoja.tipo = "produto"
     produtoLoja.id = Math.floor(Math.random() * 10000)
+    // retorna o objeto produtoLoja
     return produtoLoja
 }
 
+// metodo para aplicar desconto 
 const aplicarDesconto = {
     aplicarDesconto(percentual) {
         const valorDesconto = this.preco * (percentual / 100)
@@ -41,6 +48,7 @@ const aplicarDesconto = {
     }
 }
 
+// metodo para reajustar o preço
 const reajustarPreco = {
     reajustarPreco(percentual) {
         const valorReajuste = this.preco * (percentual / 100)
@@ -48,25 +56,34 @@ const reajustarPreco = {
         return this.preco
     }
 }
+
+// adicionando a produtoPrototypeLoja metodos criados acima e todos meetodos pertencentes a entidadePrototype
+const produtoPrototypeLoja = { ...entidadePrototype, ...aplicarDesconto, ...reajustarPreco }
+
+// cria cliente 
+function criarCliente(nome, saldoInicial) {
+    // 'herda' os metodos de clientePrototype
+    const cliente = Object.create(clientePrototype)
+
+    cliente.nome = nome
+    cliente.saldo = saldoInicial
+    cliente.tipo = 'cliente'
+    cliente.id = Math.floor(Math.random() * 10000)
+    // retorna o objeto cliente
+    return cliente
+}
+
+// metodo para depositar valor
 const depositar = {
     depositar(valor) {
         return this.saldo += valor
     }
 }
 
-const produtoPrototypeLoja = { ...entidadePrototype, ...aplicarDesconto, ...reajustarPreco }
-
-function criarCliente(nome, saldoInicial) {
-    const cliente = Object.create(clientePrototype)
-    cliente.nome = nome
-    cliente.saldo = saldoInicial
-    cliente.tipo = 'cliente'
-    cliente.id = Math.floor(Math.random() * 10000)
-    return cliente
-}
-
+// metodo para fazer compra
 const comprar = {
     comprar(produto) {
+        // condição para a compra ser realizada ou negada
         if (this.saldo >= produto.preco) {
             this.saldo -= produto.preco
             console.log(`Compra feita com sucesso!!`)
@@ -80,9 +97,10 @@ const comprar = {
     }
 }
 
+// adicionando a clientePrototype metodos criados acima e todos meetodos pertencentes a entidadePrototype
 const clientePrototype = { ...entidadePrototype, ...depositar, ...comprar }
 
-
+// metodo que cria e adiciona o item a um array
 const adicionarItem = {
     adicionarItem(produto) {
         this.itens.push(produto)
@@ -90,6 +108,7 @@ const adicionarItem = {
     }
 }
 
+// metodo para pegar por meio do map cada item do array e apresenta-los em um array novo, dessa forma mostrando um resumo do pedido.
 const resumo = {
     resumo() {
         return this.itens.map(item => ({
@@ -101,12 +120,17 @@ const resumo = {
 
 }
 
-const pedidoPrototype = { ...adicionarItem, ...resumo }
+// adicionando a pedidoPrototype metodos criados acima.
+const pedidoPrototype = {...adicionarItem, ...resumo }
 
+// cria pedido
 function criarPedido(cliente) {
+    // 'herda' os metodos de pedidoPrototype
     const pedido = Object.create(pedidoPrototype)
+
     pedido.cliente = cliente
     pedido.itens = []
+    // retorna o objeto pedido
     return pedido
 }
 
@@ -133,5 +157,9 @@ console.log(e1.exibirInfo()); // "Nome: Base Genérica | ID: 2345 | Tipo: entida
 console.log(c1.exibirInfo()); 
 console.log(p1.exibirInfo()); 
 console.log(p2.exibirInfo()); 
+
+p1.aplicarDesconto(10) // 2700
+console.log(p1); 
+
 
 
