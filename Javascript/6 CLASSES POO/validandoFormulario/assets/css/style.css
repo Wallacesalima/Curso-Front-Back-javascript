@@ -17,11 +17,18 @@ body {
     font-family: 'open sans';
 }
 
-h1 {
+p {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
     border-bottom: 2px solid var(--primary-color-dark);
-    padding-bottom: 25px;
 }
 
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 2rem;
+}
 
 .container {
     max-width: 640px;
@@ -34,11 +41,27 @@ h1 {
     text-align: center;
 }
 
+.regras {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 2rem;
+}
+
+.error-text {
+    color: red;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
 form input, form label, form button {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
     text-align: left;
+}
+
+form label {
+    margin-top: 2rem;
 }
 
 
@@ -46,13 +69,14 @@ form input {
     font-size: 25px;
     height: 50px;
     padding: 0 20px;
+    margin: 10px 0 0 0;
 }
 form input:focus {
     outline: 2px solid var(--primary-color) ;
 }
 
 form button {
-    margin-top: 30px;
+    margin-top: 40px;
     border: none;
     background: var(--primary-color);
     color: #fff;
@@ -61,7 +85,6 @@ form button {
     height: 50px;
     cursor: pointer;
     text-align: center;
-    border-radius: 5px;
 }
 
 form button:hover {
@@ -70,23 +93,4 @@ form button:hover {
 
 form button:active {
     background: #000;
-}
-
-.validar {
-    margin-top: 40px;
-    background: #fff;
-    color: var(--primary-color);
-    font-size: 20px;
-    text-align: center;
-    border-radius: 20px;
-}
-
-.cor-erro {
-    background: rgb(255, 0, 0);
-    color: #ffffff;
-}
-
-.cor-positivo {
-    background: rgb(4, 82, 4);
-    color: #ffffff;
 }
