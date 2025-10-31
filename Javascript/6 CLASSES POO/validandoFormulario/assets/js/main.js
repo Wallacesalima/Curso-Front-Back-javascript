@@ -54,6 +54,10 @@ class ValidaFormulario {
             if (campo.classList.contains('usuario')) {
                 if (!this.validaUsuario(campo)) valid = false
             }
+
+            if (valid) {
+                campo.classList.add('sucesso')
+            }
         }
         return valid
     }
@@ -75,16 +79,25 @@ class ValidaFormulario {
             valid = false
         }
 
+        if (valid) {
+            campo.classList.add('sucesso')
+        }
+
         return valid
     }
 
     // Valida o CPF utilizando uma classe auxiliar
     validandoCPF(campo) {
+        let valid = true
         const cpf = new CPF(campo.value)
 
         if (!cpf.valida()) {
             this.criaErro(campo, 'CPF inválido')
+            valid = false
             return false
+        }
+        if (valid) {
+            campo.classList.add('sucesso')
         }
 
         return true
@@ -109,6 +122,12 @@ class ValidaFormulario {
             this.criaErro(repetirSenha, 'Senha e repetir senha devem ser iguais.')
             valid = false
         }
+
+        if (valid) {
+            senha.classList.add('sucesso')
+            repetirSenha.classList.add('sucesso')
+        }
+
 
         return valid
     }
