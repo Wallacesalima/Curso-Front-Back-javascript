@@ -35,10 +35,8 @@ class ProdutoEstoque {
     }
 }
 
-class EstoqueGeral extends ProdutoEstoque {
-    constructor(nome, preco, quantidade) {
-        super(nome, preco, quantidade)
-
+class EstoqueGeral {
+    constructor() {
         this.produtos = []
     }
 
@@ -50,13 +48,17 @@ class EstoqueGeral extends ProdutoEstoque {
         } else {
             console.log('❌ Erro: O item fornecido não é uma instância de ProdutoEstoque.')
         }
+
         return this.produtos
     }
 
 
     removerProduto(nome) {
-        if (this.produtos.nome === nome) {
-            this.produtos = this.produtos.filter(produto => produto.nome !== nome)
+        const index = this.produtos.findIndex(produto => produto.nome === nome)
+
+        if (index !== -1) {
+            console.log(`🗑️ Produto "${this.produtos[index].nome}" removido com sucesso.`)
+            this.produtos.splice(index, 1)
         } else {
             console.log(`❌ Erro: Produto "${nome}" não encontrado.`)
         }
@@ -65,19 +67,17 @@ class EstoqueGeral extends ProdutoEstoque {
     }
 
     listarProdutos() {
-        const listaDeProdutos = this.produtos.map((produto) => `Produto: ${produto.nome} | Preço: ${produto.preco.toFixed(2)} |  Quantidade: ${produto.quantidade}
-        `)
+        if (this.produtos.length === 0) return '📭 Nenhum produto no estoque.'
 
-        return `
-        📦 Produtos em estoque:
-         ${listaDeProdutos}`
+        const listaDeProdutos = this.produtos
+            .map((produto) => `Produto: ${produto.nome} | Preço: ${produto.preco.toFixed(2)} |  Quantidade: ${produto.quantidade}
+        `).join('\n')
+
+        return `📦 Produtos em estoque:\n${listaDeProdutos}`
     }
     get valorTotalEstoque() {
-        const total = this.produtos.reduce((ac, produto) => {
-            ac += produto.preco
-            return ac
-        }, 0)
-        return total
+        return this.produtos.reduce((ac, produto) =>
+            ac + produto.valorTotal, 0)
     }
 }
 
