@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --primary-color:  rgb(148, 66, 66);
-    --primary-color-dark:  rgb(95, 50, 50);
+    --primary-color: rgb(148, 66, 66);
+    --primary-color-dark: rgb(95, 50, 50);
 }
 
 * {
@@ -18,8 +18,9 @@ body {
 }
 
 p {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
     border-bottom: 2px solid var(--primary-color-dark);
 }
 
@@ -34,7 +35,9 @@ p {
     text-align: center;
 }
 
-form input, form label, form button {
+form input,
+form label,
+form button {
     display: block;
     width: 100%;
     margin-bottom: 10px;
@@ -47,8 +50,9 @@ form input {
     height: 50px;
     padding: 0 20px;
 }
+
 form input:focus {
-    outline: 2px solid var(--primary-color) ;
+    outline: 2px solid var(--primary-color);
 }
 
 form button {
@@ -71,6 +75,16 @@ form button:active {
     background: #000;
 }
 
-#text {
-    max-width: 400px;
+table {
+    text-align: left;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Helvetica Neue', sans-serif;
+    background:rgb(95, 50, 50, 0.3); ;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 2px solid var(--primary-color-dark);
+    border-radius: 10px 10px 0 0 ;
 }
